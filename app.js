@@ -69,15 +69,72 @@ app.post('/feedback', express.json(), async (req, res) => {
 const sleep = (x) => new Promise((r) => setTimeout(() => r(), x));
 
 async function findPeer(user, interests, interestUserMap, userInterestMap) {
-  // ...your function code...
+  // sleep for 1 to 2 seconds
+  await sleep(Math.floor(Math.random() * 1000 + 1000));
+  // find random stranger
+  if (!interests || !interests.length) {
+    const peers = Array.from(userInterestMap.keys());
+    if (!peers || !peers.length) return [undefined, []];
+
+    let peer = peers.random();
+    if (peers.length === 1 && peer === user) return [undefined, []];
+    while (peer === user) {
+      peer = peers.random();
+    }
+    return [peer, []];
+  }
+
+  // find stranger with matching interests
+  for (const i of interests.shuffle()) {
+    const peers = Array.from(interestUserMap.get(i) || []);
+    if (!peers || !peers.length) continue;
+
+    let peer = peers.random();
+    if (peers.length === 1 && peer === user) continue;
+    while (peer === user) {
+      peer = peers.random();
+    }
+
+    const peerInterests = new Set(userInterestMap.get(peer));
+    const commonInterests = [...new Set(interests)].filter((x) =>
+      peerInterests.has(x)
+    );
+
+    return [peer, commonInterests];
+  }
+
+  // couldn't find stranger's with common interests
+  // wait to see if others are active
+  addUser(user, interests, interestUserMap, userInterestMap);
+  await sleep(6000);
+  if (user.peer) return [user.peer, []];
+
+  // look for random peer
+  deleteUser(user, interestUserMap, userInterestMap);
+  return findPeer(user, [], interestUserMap, userInterestMap);
 }
 
 function addUser(user, interests, interestUserMap, userInterestMap) {
-  // ...your function code...
+  userInterestMap.set(user, interests);
+  interests.forEach((i) => {
+    const users = interestUserMap.get(i);
+    if (!users || !users.size) {
+      return interestUserMap.set(i, new Set([user]));
+    }
+    users.add(user);
+  });
 }
 
 function deleteUser(user, interestUserMap, userInterestMap) {
-  // ...your function code...
+  const userInterests = userInterestMap.get(user);
+  if (!userInterests) return;
+  userInterests.forEach((interest) => {
+    const users = interestUserMap.get(interest);
+    if (!users || !users.size) return;
+
+    users.delete(user);
+  });
+  userInterestMap.delete(user);
 }
 
 wss.textUserInterestMap = new Map();
@@ -105,7 +162,7 @@ wss.on('connection', (ws, req) => {
       ws.interestUserMap,
       ws.userInterestMap
     );
-    // if peer exists
+    // if peer exist
     if (ws.peer) return;
 
     if (!peer) {
