@@ -25,7 +25,9 @@ class SQLite {
   }
 }
 
-const db = new SQLite()
-await db.init()
-
-export default db
+(async function() {
+  const db = new SQLite()
+  await db.init()
+  // Optionally use `db` here
+  export default db
+})()
