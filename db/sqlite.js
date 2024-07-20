@@ -1,5 +1,5 @@
-import { open } from 'sqlite'
-import sqlite3 from 'sqlite3'
+import { open } from 'sqlite';
+import sqlite3 from 'sqlite3';
 
 class SQLite {
   constructor() {}
@@ -8,26 +8,24 @@ class SQLite {
     this.db = await open({
       filename: './users.db',
       driver: sqlite3.Database,
-    })
+    });
     await this.db.exec(`
-    CREATE TABLE IF NOT EXISTS users (
-      id INTEGER PRIMARY KEY,
-      feedback TEXT NOT NULL
-    );
-  `)
+      CREATE TABLE IF NOT EXISTS users (
+        id INTEGER PRIMARY KEY,
+        feedback TEXT NOT NULL
+      );
+    `);
   }
 
   async insertFeedback({ feedback }) {
     await this.db.run(
       'INSERT INTO users (feedback) VALUES (?)',
       feedback
-    )
+    );
   }
 }
 
-(async function() {
-  const db = new SQLite()
-  await db.init()
-  // Optionally use `db` here
-  export default db
-})()
+const dbInstance = new SQLite();
+await dbInstance.init();
+
+export default dbInstance;
