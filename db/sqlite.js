@@ -26,6 +26,11 @@ class SQLite {
 }
 
 const dbInstance = new SQLite();
-await dbInstance.init();
+
+async function initializeDB() {
+  await dbInstance.init();
+}
+
+await initializeDB();
 
 export default dbInstance;
