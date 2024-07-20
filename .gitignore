@@ -1,5 +1,0 @@
-.env
-node_modules
-public/js/env.js
-users.db
-package-lock.json.
