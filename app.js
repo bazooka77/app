@@ -1,3 +1,5 @@
+import dotenv from 'dotenv';
+dotenv.config(); // Load environment variables from .env file
 import express from 'express'
 import { WebSocket, WebSocketServer } from 'ws'
 import db from './db/sqlite.js'
