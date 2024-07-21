@@ -1,1 +1,1 @@
-export const WEBSOCKET_URL = "wss://pond-hissing-airedale.glitch.me"
+export const WEBSOCKET_URL = "wss://omeglev2.glitch.me/"
