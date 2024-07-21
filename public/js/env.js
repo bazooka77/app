@@ -1,1 +1,1 @@
-export const WEBSOCKET_URL = "wss://app-topaz-kappa.vercel.app/"
+export const WEBSOCKET_URL = "wss://app-40xk6npeq-bazookas-projects.vercel.app/"
