@@ -1,1 +1,1 @@
-export const WEBSOCKET_URL = "wss://omeglev2.glitch.me/"
+export const WEBSOCKET_URL = "ws://localhost:8080"

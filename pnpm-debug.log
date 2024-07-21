@@ -1,0 +1,50 @@
+---
+  0 debug pnpm:scope: 
+    selected: 1
+    workspacePrefix: null
+  1 info pnpm: 
+    message: "A store server is running. All store manipulations are delegated to it."
+    prefix: "/app"
+  2 debug pnpm:package-json: 
+    initial: 
+      name: "Ajnabee"
+      version: "1.0.0"
+      description: "Ajnabee is an Omegle-inspired web application that enables users to engage in anonymous video chats with random peers."
+      main: "index.js"
+      scripts: 
+        start: "nodemon --exec babel-node app.js -e js,html,css"
+      type: "module"
+      keywords: []
+      author: ""
+      license: "ISC"
+      dependencies: 
+        dotenv: "^16.4.5"
+        express: "^4.19.2"
+        sqlite: "^5.1.1"
+        sqlite3: "^5.1.7"
+        ws: "^8.18.0"
+      devDependencies: 
+        @babel/core: "^7.24.9"
+        @babel/node: "^7.24.8"
+        @babel/preset-env: "^7.24.8"
+        nodemon: "^2.0.22"
+      readme: "# Ajnabee - Anonymous Peer-to-Peer Video Chat\n\nAjnabee is an Omegle-inspired web application that enables users to engage in anonymous video chats with random peers.\n\n## Setup and Installation\n\n1. Clone the repository:\n\n   ```bash\n   git clone https://github.com/AkashKarnatak/Ajnabee.git\n   ```\n\n2. Navigate to the project directory:\n\n   ```bash\n   cd Ajnabee\n   ```\n\n3. Install dependencies:\n\n   ```bash\n   npm install\n   ```\n\n4. Set environment variables:\n\n   ```bash\n   echo 'export const WEBSOCKET_URL = \"ws://localhost:8080\"' >> public/js/env.js\n   export SERVER_PORT=8080\n   ```\n   Make sure the above ports match.\n\n5. Start the server:\n\n   ```bash\n   npm run dev\n   ```\n\n6. Open a web browser and go to `http://localhost:8080`.\n\n## Contributing\n\nContributions are welcome! If you find a bug, have an idea for an enhancement, or want to contribute in any way, feel free to open an issue or submit a pull request.\n\n## License\n\nThis project is licensed under the AGPL3 License. For details, see the [LICENSE](LICENSE) file.\n"
+      readmeFilename: "README.md"
+      gitHead: "b72be6bc409e0c3e5ac3cc83090d86aa907f2a2a"
+      _id: "Ajnabee@1.0.0"
+    prefix: "/app"
+  3 warn pnpm: 
+    message: "Moving @babel/core that was installed by a different package manager to \"node_modules/.ignored"
+    prefix: "/app"
+  4 error pnpm: 
+    message: 
+      errno: -39
+      code: "ENOTEMPTY"
+      syscall: "rename"
+      path: "/rbd/pnpm-volume/908637f0-e4e0-4a05-ad19-506cd66c7220/node_modules/@babel/core"
+      dest: "/rbd/pnpm-volume/908637f0-e4e0-4a05-ad19-506cd66c7220/node_modules/.ignored/@babel/core"
+    err: 
+      name: "Error"
+      message: "ENOTEMPTY: directory not empty, rename '/rbd/pnpm-volume/908637f0-e4e0-4a05-ad19-506cd66c7220/node_modules/@babel/core' -> '/rbd/pnpm-volume/908637f0-e4e0-4a05-ad19-506cd66c7220/node_modules/.ignored/@babel/core'"
+      code: "ENOTEMPTY"
+      stack: "Error: ENOTEMPTY: directory not empty, rename '/rbd/pnpm-volume/908637f0-e4e0-4a05-ad19-506cd66c7220/node_modules/@babel/core' -> '/rbd/pnpm-volume/908637f0-e4e0-4a05-ad19-506cd66c7220/node_modules/.ignored/@babel/core'"
