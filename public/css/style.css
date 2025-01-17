@@ -62,8 +62,8 @@ p {
   height: 100%;
 }
 #logo img {
-  height: 180px;
-  width: 250px;
+  height: 100%;
+  width: 122px;
 }
 #logo h1 {
   cursor: pointer;
