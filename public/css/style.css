@@ -59,23 +59,18 @@ p {
   -webkit-box-shadow: 0 0.1em 0.3em #ccc;
 }
 #logo {
-  display: flex; /* Aligns content inside #logo */
-  align-items: center; /* Vertically aligns elements */
-  gap: 10px; /* Adds spacing between the image and heading */
+  height: 100%;
 }
-
 #logo img {
-  height: auto; /* Maintain aspect ratio */
-  max-height: 180px; /* Set a maximum height for responsiveness */
-  width: auto; /* Let the width adjust automatically */
+  height: 180px;
+  width: 250px;
 }
-
 #logo h1 {
   cursor: pointer;
   text-align: left;
   font-size: 2.5rem;
   font-weight: 500;
-  margin: 0;
+  margin: 0px;
 }
 #top-right {
   display: flex;
