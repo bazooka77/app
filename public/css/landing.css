@@ -17,13 +17,13 @@
   min-width: 60vw;
   max-width: 60vw;
   margin: auto;
-  border: 1px solid lightgray;
+  border: 1px solid #ccc;
   border-top: none;
-  background: lightyellow;
+  background: #fff;
   box-sizing: border-box;
   box-shadow: 0 0.1em 0.3em #ccc;
   -moz-box-shadow: 0 0.1em 0.3em #ccc;
-  -webkit-box-shadow: 0 0.1em 0.3em #ccc;
+  -webkit-box-shadow: 0 0.1em 0.3em #2f2727;
 }
 
 #social-message {
@@ -58,7 +58,7 @@
 }
 
 #instructions p {
-  background: lightblue;
+  background: #fb452f;
   padding: 20px 30px;
   border-radius: 20px;
 }
