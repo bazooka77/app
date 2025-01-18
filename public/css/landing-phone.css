@@ -7,7 +7,7 @@
 
 @media (max-width: 1200px) {
   #message-content {
-    font-size: 1rem;
+    font-size: small;
   }
 
   #interest-container p {
