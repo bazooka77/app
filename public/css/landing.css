@@ -34,7 +34,7 @@
 #message-content {
   width: 50%;
   padding-right: 20px;
-  font-size: 1.2rem;
+  font-size: small;
 }
 #message-image {
   width: 50px;
