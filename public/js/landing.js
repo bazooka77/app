@@ -10,11 +10,12 @@ let base = Math.floor(Math.random() * 50 + 30);
 const noise = Math.floor(Math.random() * 10 - 5);
 let allTags = [];
 
-if (!sessionStorage.getItem("peopleOnline")) {
+if (!sessionStorage.getItem("peopleOnline") || isNaN(+sessionStorage.getItem("peopleOnline"))) {
     sessionStorage.setItem("peopleOnline", base);
 } else {
     base = +sessionStorage.getItem("peopleOnline");
 }
+
 
 function updateURL(tags) {
     const url = new URL(window.location.href);
