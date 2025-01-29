@@ -1,47 +1,52 @@
-# Pingchat - Anonymous Peer-to-Peer Video Chat
+Pingchat - Anonymous Peer-to-Peer Video Chat
 
-Pingchat is an Omegle-inspired web application that enables users to engage in anonymous video chats with random peers.
+Pingchat is a web-based video chat platform inspired by Omegle. It allows users to connect anonymously with random peers for video conversations without the need for registration.
 
-## Setup and Installation
+Features
+
+Anonymous Video Chat: Instantly connect with random users without an account.
+
+Peer-to-Peer Communication: Ensures direct and seamless connections.
+
+Simple and Fast: Lightweight and easy to use, with a minimal setup.
+
+
+Setup and Installation
 
 1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/your GitHub/pingchat.git
-   ```
+git clone https://github.com/your-repo/pingchat.git
+
 
 2. Navigate to the project directory:
 
-   ```bash
-   cd pingchat
-   ```
+cd pingchat
+
 
 3. Install dependencies:
 
-   ```bash
-   npm install
-   ```
+npm install
+
 
 4. Set environment variables:
 
-   ```bash
-   echo 'export const WEBSOCKET_URL = "ws://localhost:8080"' >> public/js/env.js
-   export SERVER_PORT=8080
-   ```
-   Make sure the above ports match.
+echo 'export const WEBSOCKET_URL = "ws://localhost:8080"' >> public/js/env.js  
+export SERVER_PORT=8080
+
 
 5. Start the server:
 
-   ```bash
-   npm run dev
-   ```
+npm run dev
 
-6. Open a web browser and go to `http://localhost:8080`.
 
-## Contributing
+6. Open the application:
+Visit http://localhost:8080 in your web browser.
 
-Contributions are welcome! If you find a bug, have an idea for an enhancement, or want to contribute in any way, feel free to open an issue or submit a pull request.
 
-## License
 
-This project is licensed under the AGPL3 License. For details, see the [LICENSE](LICENSE) file.
+Contributing
+
+We welcome contributions! If you find a bug or have an idea for improvement, feel free to open an issue or submit a pull request.
+
+Let me know if you need further refinements!
+
