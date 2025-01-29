@@ -1,19 +1,19 @@
-# Ajnabee - Anonymous Peer-to-Peer Video Chat
+# Pingchat - Anonymous Peer-to-Peer Video Chat
 
-Ajnabee is an Omegle-inspired web application that enables users to engage in anonymous video chats with random peers.
+Pingchat is an Omegle-inspired web application that enables users to engage in anonymous video chats with random peers.
 
 ## Setup and Installation
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/AkashKarnatak/Ajnabee.git
+   git clone https://github.com/your GitHub/pingchat.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd Ajnabee
+   cd pingchat
    ```
 
 3. Install dependencies:
