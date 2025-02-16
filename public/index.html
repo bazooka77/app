@@ -43,6 +43,37 @@
 
         <div id="message-content">
           <div>
+            <input type="text" value="CA:  Available Soon" id="tokenAddress" readonly>
+<button onclick="copyAddress()">📋 Copy</button>
+
+<script>
+  function copyAddress() {
+    const input = document.getElementById("tokenAddress");
+    input.select();
+    document.execCommand("copy");
+    alert("Copied!");
+  }
+</script>
+
+<style>
+  input {
+    border: none;
+    background: #f3f3f3;
+    padding: 8px;
+    width: 250px;
+    font-weight: bold;
+    text-align: center;
+  }
+  button {
+    cursor: pointer;
+    padding: 8px 12px;
+    border: none;
+    background: #4caf50;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+</style>
             <h3 style="text-align: center;"><span style="color: #000000;"><strong>Meet Strangers with Your Interests!</strong></span></h3>
             <div>Pingchat lets you connect one-on-one with random people. Add your interests to match with like-minded users, and stay anonymous unless you choose to share your identity (not recommended!). You can leave any chat anytime.</div>
             <div>Chats are moderated, but users are responsible for their behavior. See our <a href="https://pingchatv1.vercel.app/term.html">Terms of Service</a> and <a href="https://pingchatv1.vercel.app/community.html">Community Guidelines</a> for more info.</div>
