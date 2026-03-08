@@ -1,1 +1,1 @@
-export const WEBSOCKET_URL = "wss://omeglev2.glitch.me/"
+export const WEBSOCKET_URL = "wss://app-z4bt.onrender.com";
